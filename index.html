@@ -22,12 +22,13 @@
       <div><p>Want to install our bot? Go <a href="https://discord.com/oauth2/authorize?client_id=1368864342174334978&permissions=8&integration_type=0&scope=bot+applications.commands">here!</a></p></div>
     </div>
     <div id="customAlert" style="display: none;">
-  <div class="alertBox">
-    <h2>👋 Welcome to UTILLY!</h2>
+  <div class="alertBox" id="alertBox">
+    <h2 id="alertTitle">👋 Welcome to UTILLY!</h2>
     <p>This is UTILLY, a completely free Discord bot that helps configure your server. Just lay your hands back and watch everything be done for you! And no need for a whip — we work hard by ourselves!</p>
     <button onclick="document.getElementById('customAlert').style.display='none'">Close</button>
   </div>
 </div>
+<audio id="dingSound" src="https://utilly-zeta.vercel.app/cdn/ding.wav" preload="auto"></audio>
     <script src="https://utilly-zeta.vercel.app/cdn/script.js"></script>
   </body>
 </html>
