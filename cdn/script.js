@@ -1,10 +1,14 @@
+
+const overlay = document.getElementById('interactionOverlay');
+  const alertBox = document.getElementById('alertBox');
+  const ding = document.getElementById('dingSound');
 window.focus()
-window.addEventListener('load', () => {
+  overlay.addEventListener('click', () => {
+    overlay.style.display = 'none';
     document.getElementById('customAlert').style.display = 'flex';
-    document.getElementById('dingSound').play();
+    ding.play();
   });
 
-  const alertBox = document.getElementById("alertBox");
   let isDragging = false, offsetX = 0, offsetY = 0;
 
   alertBox.addEventListener("mousedown", (e) => {
@@ -13,14 +17,12 @@ window.addEventListener('load', () => {
     offsetY = e.clientY - alertBox.offsetTop;
     alertBox.style.cursor = "grabbing";
   });
-
   window.addEventListener("mousemove", (e) => {
     if (isDragging) {
       alertBox.style.left = `${e.clientX - offsetX}px`;
       alertBox.style.top = `${e.clientY - offsetY}px`;
     }
   });
-
   window.addEventListener("mouseup", () => {
     isDragging = false;
     alertBox.style.cursor = "move";
