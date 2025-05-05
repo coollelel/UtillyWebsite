@@ -1,9 +1,9 @@
+document.addEventListener('DOMContentLoaded', () => {
   const overlay = document.getElementById('interactionOverlay');
   const alertBox = document.getElementById('alertBox');
   const customAlert = document.getElementById('customAlert');
   const ding = document.getElementById('dingSound');
   const closeBtn = document.getElementById('closeButton');
-  window.focus()
   overlay.addEventListener('click', () => {
     overlay.style.display = 'none';
     customAlert.style.display = 'flex';
@@ -33,3 +33,4 @@
     isDragging = false;
     alertBox.style.cursor = "move";
   });
+});
