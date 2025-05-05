@@ -17,9 +17,23 @@ body {
   flex-direction: column;
   gap: 1rem;
 }
+    @keyframes slideInText {
+      from {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
+    }
+    @keyframes fadeOut {
+      from { opacity: 1; }
+      to { opacity: 0; }
     }
     @keyframes popIn {
       0% {
@@ -43,7 +57,10 @@ body {
       font-size: 1.5rem;
       z-index: 99999;
       cursor: pointer;
-      animation: fadeIn 1s ease-in-out forwards;
+    }
+    #interactionOverlay span {
+      animation: slideInText 1s ease-out forwards;
+      opacity: 0;
     }
     #customAlert {
       position: fixed;
@@ -75,6 +92,9 @@ body {
       transform: scale(0.8);
       animation: popIn 0.5s ease-out forwards;
       transition: width 0.3s ease, height 0.3s ease;
+    }
+    .alertBox.fade-out {
+      animation: fadeOut 0.4s ease forwards;
     }
     .alertBox h2 {
       margin: 0 0 10px;
