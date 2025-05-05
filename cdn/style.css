@@ -17,6 +17,20 @@ body {
   flex-direction: column;
   gap: 1rem;
 }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes popIn {
+      0% {
+        transform: scale(0.8) translateY(-30px);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+      }
+    }
     #interactionOverlay {
       position: fixed;
       top: 0; left: 0;
@@ -29,6 +43,7 @@ body {
       font-size: 1.5rem;
       z-index: 99999;
       cursor: pointer;
+      animation: fadeIn 1s ease-in-out forwards;
     }
     #customAlert {
       position: fixed;
@@ -39,6 +54,7 @@ body {
       align-items: center;
       justify-content: center;
       z-index: 9999;
+      animation: fadeIn 0.6s ease-in-out forwards;
     }
     .alertBox {
       background: #111;
@@ -55,11 +71,16 @@ body {
       overflow: auto;
       position: absolute;
       cursor: move;
+      opacity: 0;
+      transform: scale(0.8);
+      animation: popIn 0.5s ease-out forwards;
+      transition: width 0.3s ease, height 0.3s ease;
     }
     .alertBox h2 {
       margin: 0 0 10px;
       color: #00bfff;
       cursor: grab;
+      user-select: none;
     }
     .alertBox button {
       margin-top: 15px;
@@ -69,4 +90,9 @@ body {
       color: #000;
       border-radius: 5px;
       cursor: pointer;
+      transition: transform 0.2s ease, background 0.3s ease;
+    }
+    .alertBox button:hover {
+      transform: scale(1.05);
+      background: #00a4e4;
     }
