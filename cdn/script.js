@@ -4,6 +4,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const customAlert = document.getElementById('customAlert');
   const ding = document.getElementById('dingSound');
   const closeBtn = document.getElementById('closeButton');
+  if (!overlay || !alertBox || !customAlert || !ding || !closeBtn) {
+    console.error("One or more elements are missing! Check the element IDs in your HTML.");
+    return;
+  }
   overlay.addEventListener('click', () => {
     overlay.style.display = 'none';
     customAlert.style.display = 'flex';
