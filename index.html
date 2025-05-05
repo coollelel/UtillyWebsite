@@ -16,19 +16,19 @@
     <meta name="twitter:image" content="https://cdn.discordapp.com/avatars/1368864342174334978/bcab46b22c6e9e0f8919bbe106a6cb82?size=256" />
   </head>
   <body>
-    <div id="interactionOverlay">Click anywhere to continue...</div>
+  <div id="interactionOverlay"><span>Click anywhere to continue...</span></div>
     <div class="container">
       <div><h1>UTILLY</h1></div>
       <div><h3>Utility for FREE on your Discord server!</h3></div>
       <div><p>Want to install our bot? Go <a href="https://discord.com/oauth2/authorize?client_id=1368864342174334978&permissions=8&integration_type=0&scope=bot+applications.commands">here!</a></p></div>
     </div>
-    <div id="customAlert" style="display: none;">
-  <div class="alertBox" id="alertBox">
-    <h2 id="alertTitle">👋 Welcome to UTILLY!</h2>
-    <p>This is UTILLY, a completely free Discord bot that helps configure your server. Just lay your hands back and watch everything be done for you! And no need for a whip — we work hard by ourselves!</p>
-    <button onclick="document.getElementById('customAlert').style.display='none'">Close</button>
+  <div id="customAlert">
+    <div class="alertBox" id="alertBox">
+      <h2 id="alertTitle">👋 Welcome to UTILLY!</h2>
+      <p>This is UTILLY, a completely free Discord bot that helps configure your server. Just lay your hands back and watch everything be done for you! And no need for a whip — we work hard by ourselves!</p>
+      <button id="closeButton">Close</button>
+    </div>
   </div>
-</div>
 <audio id="dingSound" src="https://utilly-zeta.vercel.app/cdn/ding.wav" preload="auto"></audio>
     <script src="https://utilly-zeta.vercel.app/cdn/script.js"></script>
   </body>
