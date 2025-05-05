@@ -1,16 +1,13 @@
-
-const overlay = document.getElementById('interactionOverlay');
+  const overlay = document.getElementById('interactionOverlay');
   const alertBox = document.getElementById('alertBox');
+  const customAlert = document.getElementById('customAlert');
   const ding = document.getElementById('dingSound');
-window.focus()
   overlay.addEventListener('click', () => {
     overlay.style.display = 'none';
-    document.getElementById('customAlert').style.display = 'flex';
+    customAlert.style.display = 'flex';
     ding.play();
   });
-
   let isDragging = false, offsetX = 0, offsetY = 0;
-
   alertBox.addEventListener("mousedown", (e) => {
     isDragging = true;
     offsetX = e.clientX - alertBox.offsetLeft;
