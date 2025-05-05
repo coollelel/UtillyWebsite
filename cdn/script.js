@@ -1,4 +1,5 @@
-  window.addEventListener('load', () => {
+window.focus()
+window.addEventListener('load', () => {
     document.getElementById('customAlert').style.display = 'flex';
     document.getElementById('dingSound').play();
   });
